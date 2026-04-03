@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invitation de Mariage - Maher & Malek</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="locked">
+
+  <!-- INTRO / ENVELOPPE -->
+  <div class="intro-overlay" id="introOverlay">
+    <div class="intro-box">
+      <p class="intro-label">Vous êtes invités</p>
+      <h1 class="intro-title">Mariage</h1>
+      <p class="intro-text">
+        Avec une immense joie, nous vous invitons à célébrer l’un des plus beaux jours de notre vie.
+        Cliquez sur le sceau pour ouvrir l’invitation.
+      </p>
+      <button class="seal-button" id="openInviteBtn" aria-label="Ouvrir l'invitation"></button>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero" id="home">
+    <div class="container">
+      <div class="hero-card card">
+        <p class="eyebrow">Invitation officielle</p>
+
+        <h1 class="hero-names">Maher</h1>
+        <div class="hero-amp">&amp;</div>
+        <h2 class="hero-names hero-names-secondary">Malek</h2>
+
+        <p class="hero-date">Samedi 27 Mars 2027 • 20:00</p>
+
+        <p class="hero-quote">
+          “L’amour ne consiste pas à se regarder l’un l’autre, mais à regarder ensemble dans la même direction.”
+        </p>
+
+        <div class="hero-actions">
+          <a href="#details" class="btn btn-primary">Voir les détails</a>
+          <a href="https://maps.app.goo.gl/Nw6keg7uvs693axq7?g_st=ic" target="_blank" class="btn btn-secondary">Ouvrir la localisation</a>
+        </div>
+
+        <div class="countdown-grid" id="countdown">
+          <div class="countdown-item">
+            <div class="countdown-value" id="days">00</div>
+            <div class="countdown-label">Jours</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-value" id="hours">00</div>
+            <div class="countdown-label">Heures</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-value" id="minutes">00</div>
+            <div class="countdown-label">Minutes</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-value" id="seconds">00</div>
+            <div class="countdown-label">Secondes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- DETAILS -->
+  <section class="section" id="details">
+    <div class="container">
+      <h2 class="section-title">Les détails du grand jour</h2>
+      <p class="section-subtitle">
+        Nous serions honorés de vous compter parmi nous pour partager ce moment inoubliable, rempli d’émotion, de joie et d’amour.
+      </p>
+
+      <div class="details-grid details-grid-two">
+        <div class="detail-box card">
+          <div class="detail-icon">📅</div>
+          <h3 class="detail-title">Date & Heure</h3>
+          <p class="detail-text">
+            Samedi 27 Mars 2027<br>
+            Accueil des invités à partir de 19:30<br>
+            Début de la célébration à 20:00
+          </p>
+        </div>
+
+        <div class="detail-box card">
+          <div class="detail-icon">📍</div>
+          <h3 class="detail-title">Lieu</h3>
+          <p class="detail-text">
+            Maison Berrich
+          </p>
+          <a href="https://maps.app.goo.gl/Nw6keg7uvs693axq7?g_st=ic" target="_blank" class="btn btn-primary btn-small">Voir sur Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMME -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Programme de la soirée</h2>
+      <p class="section-subtitle">
+        Voici le déroulement prévu pour cette soirée exceptionnelle. Préparez-vous à vivre de beaux moments à nos côtés.
+      </p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-time">19:30</div>
+          <div class="timeline-card card">
+            <h3 class="timeline-title">Accueil des invités</h3>
+            <p class="timeline-desc">Ouverture du lieu, installation des invités et premiers instants de convivialité.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">20:00</div>
+          <div class="timeline-card card">
+            <h3 class="timeline-title">Début de la célébration</h3>
+            <p class="timeline-desc">Le moment tant attendu pour célébrer ensemble cette union et partager cette soirée unique.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">21:00</div>
+          <div class="timeline-card card">
+            <h3 class="timeline-title">Dîner & Photos</h3>
+            <p class="timeline-desc">Un moment chaleureux pour se retrouver, trinquer ensemble et immortaliser cette journée.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">22:30</div>
+          <div class="timeline-card card">
+            <h3 class="timeline-title">Soirée & Fête</h3>
+            <p class="timeline-desc">Place à la musique, à la joie, aux animations et à la fête jusqu’au bout de la nuit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTRE HISTOIRE -->
+  <section class="section">
+    <div class="container">
+      <div class="story-card card">
+        <h2 class="section-title story-title">Notre histoire</h2>
+
+        <p class="story-quote">
+          “Deux âmes, une promesse, et une vie entière à écrire ensemble.”
+        </p>
+
+        <p class="story-text">
+          Depuis notre première rencontre, chaque instant a renforcé notre certitude : nous étions destinés à partager bien plus qu’une histoire.
+          Aujourd’hui, entourés des personnes qui comptent le plus pour nous, nous souhaitons célébrer ce nouveau chapitre avec vous.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIE -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Quelques souvenirs</h2>
+      <p class="section-subtitle">
+        Remplace ces images par les vraies photos du couple pour un rendu encore plus fort émotionnellement.
+      </p>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="assets/photo1.jpg" alt="Souvenir 1">
+        </div>
+        <div class="gallery-item">
+          <img src="assets/photo2.jpg" alt="Souvenir 2">
+        </div>
+        <div class="gallery-item">
+          <img src="assets/photo3.jpg" alt="Souvenir 3">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="section">
+    <div class="container">
+      <div class="rsvp-box card">
+        <h2 class="section-title">Confirmez votre présence</h2>
+
+        <p class="rsvp-text">
+          Votre présence compte énormément pour nous. Merci de confirmer votre participation dès que possible afin que nous puissions vous accueillir dans les meilleures conditions.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://wa.me/21600000000?text=Bonjour%20je%20confirme%20ma%20presence%20au%20mariage%20de%20Maher%20et%20Malek%20avec%20grand%20plaisir%20%F0%9F%92%9B" target="_blank" class="btn btn-primary">
+            Confirmer sur WhatsApp
+          </a>
+
+          <a href="#home" class="btn btn-secondary">Retour en haut</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Fait avec amour pour célébrer Maher & Malek • Personnalisable à 100%
+  </footer>
+
+  <!-- MUSIQUE OPTIONNELLE -->
+  <audio id="bgMusic" loop>
+    <!-- Décommente si tu ajoutes assets/music.mp3 -->
+    <!-- <source src="assets/music.mp3" type="audio/mpeg"> -->
+  </audio>
+
+  <button class="music-toggle" id="musicToggle" aria-label="Activer ou couper la musique">♫</button>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
