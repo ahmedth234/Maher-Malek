@@ -3,21 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maher & Malek - Invitation de Mariage</title>
+  <title>Rached & Nourchene - Invitation de Mariage</title>
 
   <!-- Open Graph pour Messenger / Facebook -->
-  <meta property="og:title" content="Maher & Malek - Invitation de Mariage">
-  <meta property="og:description" content="Cliquez pour découvrir notre invitation interactive !">
+  <meta property="og:title" content="Rached & Nourchene - Invitation de Mariage">
+  <meta property="og:description" content="Cliquez pour découvrir notre invitation de mariage interactive.">
+  <meta property="og:site_name" content="Rached & Nourchene">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ahmedth234.github.io/Maher-Malek/"> <!-- Ton lien hébergé -->
-  <meta property="og:image" content="https://ahmedth234.github.io/Maher-Malek/assets/preview.jpg"> <!-- Image de preview -->
-  <meta property="og:image:alt" content="Maher & Malek - Invitation de Mariage">
+  <meta property="og:url" content="https://ahmedth234.github.io/Maher-Malek/">
+  <meta property="og:image" content="https://ahmedth234.github.io/Maher-Malek/assets/photo1.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:image:alt" content="Rached & Nourchene - Invitation de Mariage">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Maher & Malek - Invitation de Mariage">
-  <meta name="twitter:description" content="Cliquez pour découvrir notre invitation interactive !">
-  <meta name="twitter:image" content="https://ahmedth234.github.io/Maher-Malek/assets/preview.jpg">
+  <meta name="twitter:title" content="Rached & Nourchene - Invitation de Mariage">
+  <meta name="twitter:description" content="Cliquez pour découvrir notre invitation de mariage interactive.">
+  <meta name="twitter:image" content="https://ahmedth234.github.io/Maher-Malek/assets/photo1.jpg">
+  <link rel="canonical" href="https://ahmedth234.github.io/Maher-Malek/">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,15 +37,24 @@
   <!-- INTRO / ENVELOPPE -->
   <div class="intro-overlay" id="introOverlay">
     <div class="intro-box">
-      <p class="intro-label">Vous êtes invités</p>
+      <p class="intro-label">Une invitation pour vous</p>
       <h1 class="intro-title">Mariage</h1>
       <p class="intro-text">
         Avec une immense joie, nous vous invitons à célébrer l’un des plus beaux jours de notre vie.
-        Cliquez sur le sceau pour ouvrir l’invitation.
+        Cliquez sur le sceau pour ouvrir votre invitation.
       </p>
       <button class="seal-button" id="openInviteBtn" aria-label="Ouvrir l'invitation"></button>
     </div>
   </div>
+
+  <nav class="site-nav" aria-label="Navigation principale">
+    <a href="#home" class="nav-brand">M <span>&amp;</span> M</a>
+    <div class="nav-links">
+      <a href="#details">Le grand jour</a>
+      <a href="#programme">Programme</a>
+      <a href="#rsvp">RSVP</a>
+    </div>
+  </nav>
 
   <!-- HERO -->
   <header class="hero" id="home">
@@ -117,7 +131,7 @@
   </section>
 
   <!-- PROGRAMME -->
-  <section class="section">
+  <section class="section" id="programme">
     <div class="container">
       <h2 class="section-title">Programme de la soirée</h2>
       <p class="section-subtitle">
@@ -183,25 +197,25 @@
     <div class="container">
       <h2 class="section-title">Quelques souvenirs</h2>
       <p class="section-subtitle">
-        Remplace ces images par les vraies photos du couple pour un rendu encore plus fort émotionnellement.
+        Un avant-goût de l’ambiance de cette journée unique.
       </p>
 
       <div class="gallery-grid">
         <div class="gallery-item">
-          <img src="assets/photo1.jpg" alt="Souvenir 1">
+          <img src="assets/photo1.jpg" alt="Souvenir des futurs mariés">
         </div>
         <div class="gallery-item">
-          <img src="assets/photo2.jpg" alt="Souvenir 2">
+          <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=85" alt="Décoration de mariage" loading="lazy">
         </div>
         <div class="gallery-item">
-          <img src="assets/photo3.jpg" alt="Souvenir 3">
+          <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=85" alt="Détails d’une cérémonie" loading="lazy">
         </div>
       </div>
     </div>
   </section>
 
   <!-- RSVP -->
-  <section class="section">
+  <section class="section" id="rsvp">
     <div class="container">
       <div class="rsvp-box card">
         <h2 class="section-title">Confirmez votre présence</h2>
