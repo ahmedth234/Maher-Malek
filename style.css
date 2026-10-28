@@ -53,3 +53,13 @@ body{background:#f9f0e0}main{max-width:744px;background:#f9f0e0;box-shadow:none}
 /* Calligraphie au trait fin ; pas de graisse simulée sur les prénoms. */
 .hero h1{font-family:'NewFonts',cursive;font-weight:300!important;font-synthesis:none;text-shadow:none}
 .hero h1 .name-initial{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300!important;font-synthesis:none;text-shadow:none}
+/* Respecter les dimensions prévues dans les navigateurs mobiles intégrés. */
+html,body{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.hero,.hero *{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.hero .wedding-day,.hero .date-top{white-space:nowrap}
+.hero .scroll-cue>span:first-child{white-space:nowrap}
+.hero .scroll-cue .arrow{font-size:1.25em;line-height:1;margin-top:8px}
+.hero h1 small{height:auto;min-height:0;font-size:.5em;line-height:1;margin:2px 0}
+.external-browser-tip{position:fixed;bottom:calc(12px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:14px;max-width:calc(100vw - 24px);padding:10px 12px 10px 17px;border:1px solid #bda875;background:#fcf8eff5;box-shadow:0 3px 18px #514b3c26;border-radius:5px;font:500 13px/1.4 Montserrat,sans-serif;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.external-browser-tip a{white-space:nowrap;color:#715b2d;text-decoration:none}
+.external-browser-tip button{border:0;background:none;color:#715b2d;font:20px/1 sans-serif;padding:3px 5px}
