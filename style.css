@@ -47,3 +47,5 @@ body{background:#f9f0e0}main{max-width:744px;background:#f9f0e0;box-shadow:none}
 .hero .date-top,.hero .date-top strong{font-weight:700}
 
 .hero .date-top{font-size:clamp(27px,6.2vw,30px)}
+
+.hero h1,.hero h1 .name-initial{font-weight:400}
