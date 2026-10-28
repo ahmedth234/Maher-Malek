@@ -45,3 +45,5 @@ body{background:#f9f0e0}main{max-width:744px;background:#f9f0e0;box-shadow:none}
 .hero h1 small{height:40px;margin:2px 0}
 .hero .scroll-cue{top:63.5%;margin-top:0;text-shadow:0 1px 8px #fff8e5}
 .hero .date-top,.hero .date-top strong{font-weight:700}
+
+.hero .date-top{font-size:clamp(27px,6.2vw,30px)}
