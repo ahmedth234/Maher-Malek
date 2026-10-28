@@ -23,7 +23,7 @@
  // The rose travels down the programme as the invitation is scrolled.
  const scrollRoses=Array.from(scope.querySelectorAll('[data-animate-sbs-event="scroll"]'));
  let queued=false;
- function positionRoses(){queued=false;if(reduce.matches)return;scrollRoses.forEach(el=>{const board=el.closest('.t396__artboard');const bounds=board.getBoundingClientRect();const fraction=Math.max(0,Math.min(1,(innerHeight*.8-bounds.top)/(bounds.height+innerHeight*.2)));el.style.transform=`translateY(${fraction*311}px)`;});}
+ function positionRoses(){queued=false;if(reduce.matches)return;scrollRoses.forEach(el=>{const board=el.closest('.t396__artboard');const bounds=board.getBoundingClientRect();const fraction=Math.max(0,Math.min(1,(innerHeight*.8-bounds.top)/(bounds.height+innerHeight*.2)));el.style.transform=`translateY(${fraction*236}px)`;});}
  addEventListener('scroll',()=>{if(!queued){queued=true;requestAnimationFrame(positionRoses);}},{passive:true});positionRoses();
  // Fade in the panel copy and ornaments without affecting their absolute geometry.
  const reveal=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){if(!reduce.matches){const el=entry.target;const distance=Number(el.dataset.animateDistance)||25;el.animate([{opacity:0,translate:`0 ${Math.min(distance,35)}px`},{opacity:1,translate:'0 0'}],{duration:(Number(el.dataset.animateDuration)||1.5)*1000,easing:'ease-out',fill:'both'});}reveal.unobserve(entry.target);}}),{threshold:.05});
