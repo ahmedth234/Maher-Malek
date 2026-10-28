@@ -59,7 +59,7 @@ async function finishOpening() {
   gardenVideo.currentTime = 0;
   if (!reducedMotion.matches) gardenVideo.play().catch(()=>{});
   cover.classList.add('flap-revealing');
-  openingRevealTimer = setTimeout(completeOpening,reducedMotion.matches?0:250);
+  openingRevealTimer = setTimeout(completeOpening,reducedMotion.matches?0:600);
  }
  cover.classList.add('flap-preparing');
  if (!reducedMotion.matches && openingVideo.videoWidth) {
@@ -107,7 +107,7 @@ async function finishOpening() {
   envelopeExitAnimation=flap.animate([
    {transform:'translateY(0)'},
    {transform:`translateY(${-Math.max(0,flapBottom)-2}px)`}
-  ],{duration:1700,easing:'cubic-bezier(.3,0,.2,1)',fill:'forwards'});
+  ],{duration:700,easing:'cubic-bezier(.4,0,.6,1)',fill:'forwards'});
   envelopeExitAnimation.finished.then(revealInvitation,()=>{});
  } catch {
   revealInvitation();
