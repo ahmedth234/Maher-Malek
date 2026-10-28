@@ -29,3 +29,12 @@ body{background:#f9f0e0}main{max-width:744px;background:#f9f0e0;box-shadow:none}
 /* L’enveloppe sort entièrement vers le haut avant de libérer l’invitation. */
 .invitation-cover.departing{background:transparent;transition:background-color .25s ease;pointer-events:none}
 .envelope-stage{will-change:transform}
+
+/* Le corps reste fixe pendant que seul le rabat supérieur et son sceau montent. */
+.invitation-cover.flap-opening{opacity:1;visibility:visible;background:#f9f0e0;transition:none}
+.flap-opening .envelope-stage{background:radial-gradient(ellipse at 50% 25%,#fff8e9,#ecd4af 80%);transform:none}
+.flap-layer{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.envelope-body-layer{z-index:2}
+.envelope-upper-flap{z-index:3;will-change:transform}
+.flap-opening .envelope-video,.flap-opening .envelope-still{visibility:hidden}
+.invitation-cover.flap-revealing{opacity:0;transition:opacity .6s ease;pointer-events:none}

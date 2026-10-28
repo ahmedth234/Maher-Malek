@@ -16,14 +16,19 @@ const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 // Les initiales sont intégrées aux images de la vidéo. Aucun calque ne suit le sceau.
 let openingTimer;
 let envelopeExitAnimation;
+let openingRevealTimer;
 const envelopeStage = document.querySelector('.envelope-stage');
+const envelopeInterior = new Image();
+envelopeInterior.src = 'assets/animation/envelope-open-interior.jpg';
 let openingStarted = false;
 function showEnvelope() {
  clearTimeout(openingTimer);
+ clearTimeout(openingRevealTimer);
  openingStarted = false;
  cover.hidden = false;
  envelopeExitAnimation?.cancel();
- cover.classList.remove('opening','fading','departing');
+ envelopeStage.querySelectorAll('.flap-layer').forEach(layer=>layer.remove());
+ cover.classList.remove('opening','fading','departing','flap-opening','flap-revealing','flap-preparing');
  document.body.classList.add('locked');
  document.body.classList.remove('invitation-open');
  invitation.inert = true;
@@ -35,15 +40,11 @@ function showEnvelope() {
  cover.tabIndex = -1;
  cover.focus({preventScroll:true});
 }
-function finishOpening() {
- if (cover.hidden || cover.classList.contains('departing')) return;
+async function finishOpening() {
+ if (cover.hidden || cover.classList.contains('flap-opening') || cover.classList.contains('flap-preparing')) return;
  clearTimeout(openingTimer);
- cover.classList.add('departing');
- document.body.classList.add('invitation-open');
- gardenVideo.currentTime = 0;
- if (!reducedMotion.matches) gardenVideo.play().catch(()=>{});
  function completeOpening() {
-  if (!cover.classList.contains('departing')) return;
+  if (!cover.classList.contains('flap-opening')) return;
   cover.hidden = true;
   openingVideo.pause();
   document.body.classList.remove('locked');
@@ -52,15 +53,65 @@ function finishOpening() {
   heading.tabIndex = -1;
   heading.focus({preventScroll:true});
  }
- if (reducedMotion.matches) { completeOpening(); return; }
- // Wait until the entire envelope has crossed the viewport's top edge.
- const bounds = envelopeStage.getBoundingClientRect();
- const distance = -(bounds.bottom + window.innerHeight * 0.35);
- envelopeExitAnimation = envelopeStage.animate([
-  { transform: 'translateY(0)' },
-  { transform: `translateY(${distance}px)` }
- ], { duration: 1500, easing: 'cubic-bezier(.35,0,.15,1)', fill: 'forwards' });
- envelopeExitAnimation.finished.then(completeOpening,()=>{});
+ function revealInvitation() {
+  if (!cover.classList.contains('flap-opening')) return;
+  document.body.classList.add('invitation-open');
+  gardenVideo.currentTime = 0;
+  if (!reducedMotion.matches) gardenVideo.play().catch(()=>{});
+  cover.classList.add('flap-revealing');
+  openingRevealTimer = setTimeout(completeOpening,reducedMotion.matches?0:600);
+ }
+ cover.classList.add('flap-preparing');
+ if (!reducedMotion.matches && openingVideo.videoWidth) {
+  try { await envelopeInterior.decode(); } catch {}
+ }
+ cover.classList.remove('flap-preparing');
+ cover.classList.add('flap-opening');
+ if (reducedMotion.matches || !openingVideo.videoWidth) { revealInvitation(); return; }
+ openingVideo.pause();
+ // Separate the upper flap (with its integrated seal) from the stationary body.
+ // The moving flap is sampled from the final video frame; its lining remains fixed.
+ try {
+  const width = openingVideo.videoWidth;
+  const height = openingVideo.videoHeight;
+  const mask = document.createElement('canvas');
+  mask.width=width;mask.height=height;
+  const maskContext=mask.getContext('2d');
+  const sx=width/720,sy=height/1280;
+  maskContext.scale(sx,sy);
+  maskContext.beginPath();
+  maskContext.moveTo(26,0);maskContext.lineTo(694,0);maskContext.lineTo(360,350);maskContext.closePath();
+  maskContext.fill();
+  maskContext.beginPath();maskContext.ellipse(360,306,150,107,0,0,Math.PI*2);maskContext.fill();
+  function createLayer(className,operation) {
+   const layer=document.createElement('canvas');layer.width=width;layer.height=height;
+   layer.className='flap-layer '+className;layer.setAttribute('aria-hidden','true');
+   const context=layer.getContext('2d');context.drawImage(openingVideo,0,0,width,height);
+   context.globalCompositeOperation=operation;context.drawImage(mask,0,0);
+   envelopeStage.append(layer);return layer;
+  }
+  const body=document.createElement('canvas');body.width=width;body.height=height;
+  body.className='flap-layer envelope-body-layer';body.setAttribute('aria-hidden','true');
+  const bodyContext=body.getContext('2d');
+  if(envelopeInterior.complete && envelopeInterior.naturalWidth) {
+   bodyContext.drawImage(envelopeInterior,0,0,width,height);
+  } else {
+   const lining=bodyContext.createLinearGradient(0,0,0,height);
+   lining.addColorStop(0,'#bd905f');lining.addColorStop(1,'#e4be8b');
+   bodyContext.fillStyle=lining;bodyContext.fillRect(0,0,width,height);
+  }
+  envelopeStage.append(body);
+  const flap=createLayer('envelope-upper-flap','destination-in');
+  const bounds=envelopeStage.getBoundingClientRect();
+  const flapBottom=bounds.top+bounds.height*(413/1280);
+  envelopeExitAnimation=flap.animate([
+   {transform:'translateY(0)'},
+   {transform:`translateY(${-Math.max(0,flapBottom)-40}px)`}
+  ],{duration:1700,easing:'cubic-bezier(.3,0,.2,1)',fill:'forwards'});
+  envelopeExitAnimation.finished.then(revealInvitation,()=>{});
+ } catch {
+  revealInvitation();
+ }
 }
 async function openEnvelope() {
  if(openingStarted) return;
@@ -69,7 +120,7 @@ async function openEnvelope() {
  if(reducedMotion.matches){finishOpening();return;}
  cover.classList.add('opening');
  openingVideo.currentTime = 0;
- openingVideo.playbackRate = 1.5;
+ openingVideo.playbackRate = 1.2;
  try { await openingVideo.play(); }
  catch { finishOpening(); }
  openingTimer = setTimeout(finishOpening,20000);
