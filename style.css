@@ -23,3 +23,5 @@ body{background:#f9f0e0}main{max-width:744px;background:#f9f0e0;box-shadow:none}
 .seal-hit-area:focus-visible{outline:2px solid #c9a96a;outline-offset:5px}
 
 .invitation-cover:focus{outline:none}
+/* Esperluette droite, lisible et centrée entre les deux prénoms. */
+.hero h1 small{display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',Georgia,serif;font-style:normal;font-weight:400;font-size:40px;line-height:1;height:46px;margin:3px 0;padding:0;letter-spacing:0;text-indent:0}
