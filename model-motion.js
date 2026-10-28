@@ -29,8 +29,4 @@
  const reveal=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){if(!reduce.matches){const el=entry.target;const distance=Number(el.dataset.animateDistance)||25;el.animate([{opacity:0,translate:`0 ${Math.min(distance,35)}px`},{opacity:1,translate:'0 0'}],{duration:(Number(el.dataset.animateDuration)||1.5)*1000,easing:'ease-out',fill:'both'});}reveal.unobserve(entry.target);}}),{threshold:.05});
  scope.querySelectorAll('.t-animate:not([data-motion-frames])').forEach(el=>reveal.observe(el));
  reduce.addEventListener('change',()=>{if(reduce.matches){animations.forEach(a=>a.cancel());scrollRoses.forEach(el=>el.style.transform='');}else{motionElements.forEach(el=>{el.dataset.motionStarted='';animateElement(el);});}});
- const dialog=document.getElementById('rsvpDialog');
- scope.querySelectorAll('.rsvp-seal-trigger').forEach(trigger=>trigger.addEventListener('click',event=>{event.preventDefault();dialog.showModal();}));
- dialog.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
- dialog.addEventListener('click',event=>{if(event.target===dialog){const box=dialog.getBoundingClientRect();if(event.clientX<box.left||event.clientX>box.right||event.clientY<box.top||event.clientY>box.bottom)dialog.close();}});
 })();
