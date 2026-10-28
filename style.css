@@ -49,3 +49,7 @@ body{background:#f9f0e0}main{max-width:744px;background:#f9f0e0;box-shadow:none}
 .hero .date-top{font-size:clamp(27px,6.2vw,30px)}
 
 .hero h1,.hero h1 .name-initial{font-weight:400}
+
+/* Calligraphie au trait fin ; pas de graisse simulée sur les prénoms. */
+.hero h1{font-family:'NewFonts',cursive;font-weight:300!important;font-synthesis:none;text-shadow:none}
+.hero h1 .name-initial{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300!important;font-synthesis:none;text-shadow:none}
