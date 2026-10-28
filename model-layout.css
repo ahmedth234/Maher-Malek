@@ -58,3 +58,10 @@
 
 /* Une ligne plus horizontale, en gardant le geste calligraphique doré. */
 #rec4227041103 [data-elem-id="1782312134224"] .tn-atom{transform:rotate(7deg);transform-origin:center}
+/* Nouveau message sous la basmala, en deux lignes. */
+#rec4227041103 [data-elem-id="1780748008617000003"]{top:899px!important}
+#rec4227041103 [data-elem-id="1780748008617000003"] .tn-atom{font-size:32px!important;line-height:1.35!important}
+#rec4227041103 [data-elem-id="1780748008617000005"]{top:1010px!important}
+@media(max-width:479px){#rec4227041103 [data-elem-id="1780748008617000003"] .tn-atom{font-size:28px!important}}
+#rec4227041103 [data-elem-id="1780748008617000003"]{left:50%!important;width:min(560px,calc(100vw - 36px))!important;transform:translateX(-50%)}
+#rec4227041103 [data-elem-id="1780748008617000005"]{left:50%!important;width:min(307px,calc(100vw - 40px))!important;transform:translateX(-50%)}
