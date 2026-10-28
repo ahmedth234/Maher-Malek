@@ -72,3 +72,6 @@
 #rec2487446153 [data-elem-id="1772813480591000001"]{top:169px!important;left:50%!important;width:min(308px,calc(100vw - 40px))!important;transform:translateX(-50%)}
 #rec2487446153 [data-elem-id="1772813480591000001"] .tn-atom{font-size:14px!important;line-height:1.35!important;color:#8d7b68!important}
 @media(max-width:479px){#rec2487446153 [data-elem-id="1772804808869"] .tn-atom{font-size:32px!important}}
+
+/* Text boxes keep their allotted space when Android enlarges system text. */
+.reference-sections [data-elem-type="text"] .tn-atom{display:block;height:auto!important;min-height:0}
