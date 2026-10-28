@@ -55,11 +55,11 @@ function finishOpening() {
  if (reducedMotion.matches) { completeOpening(); return; }
  // Wait until the entire envelope has crossed the viewport's top edge.
  const bounds = envelopeStage.getBoundingClientRect();
- const distance = -(bounds.bottom + 24);
+ const distance = -(bounds.bottom + window.innerHeight * 0.35);
  envelopeExitAnimation = envelopeStage.animate([
   { transform: 'translateY(0)' },
   { transform: `translateY(${distance}px)` }
- ], { duration: 800, easing: 'cubic-bezier(.45,0,.2,1)', fill: 'forwards' });
+ ], { duration: 1500, easing: 'cubic-bezier(.35,0,.15,1)', fill: 'forwards' });
  envelopeExitAnimation.finished.then(completeOpening,()=>{});
 }
 async function openEnvelope() {
