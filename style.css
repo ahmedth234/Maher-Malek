@@ -37,4 +37,4 @@ body{background:#f9f0e0}main{max-width:744px;background:#f9f0e0;box-shadow:none}
 .envelope-body-layer{z-index:2}
 .envelope-upper-flap{z-index:3;will-change:transform}
 .flap-opening .envelope-video,.flap-opening .envelope-still{visibility:hidden}
-.invitation-cover.flap-revealing{opacity:0;transition:opacity .6s ease;pointer-events:none}
+.invitation-cover.flap-revealing{opacity:0;transition:opacity .25s ease;pointer-events:none}
