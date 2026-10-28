@@ -55,3 +55,6 @@
 #rec4227041103 [data-elem-id="1782312134224"] .tn-atom__img{height:86px;width:100%;object-fit:contain}
 #rec4227041103 [data-elem-id="1782312134224"] .tn-atom{display:block;height:86px!important;background:#b48c3d;-webkit-mask:url('assets/model/basmala-calligraphie-doree.png') center/contain no-repeat;mask:url('assets/model/basmala-calligraphie-doree.png') center/contain no-repeat}
 #rec4227041103 [data-elem-id="1782312134224"] .tn-atom__img{opacity:0}
+
+/* Une ligne plus horizontale, en gardant le geste calligraphique doré. */
+#rec4227041103 [data-elem-id="1782312134224"] .tn-atom{transform:rotate(7deg);transform-origin:center}
