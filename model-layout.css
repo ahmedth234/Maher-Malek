@@ -65,3 +65,10 @@
 @media(max-width:479px){#rec4227041103 [data-elem-id="1780748008617000003"] .tn-atom{font-size:28px!important}}
 #rec4227041103 [data-elem-id="1780748008617000003"]{left:50%!important;width:min(560px,calc(100vw - 36px))!important;transform:translateX(-50%)}
 #rec4227041103 [data-elem-id="1780748008617000005"]{left:50%!important;width:min(307px,calc(100vw - 40px))!important;transform:translateX(-50%)}
+/* Le nom du lieu devient le repère principal ; l’adresse reste secondaire. */
+#rec2487446153 [data-elem-id="1772804808869"]{top:110px!important;left:50%!important;width:min(360px,calc(100vw - 36px))!important;transform:translateX(-50%)}
+#rec2487446153 [data-elem-id="1772804808869"] .tn-atom{font-family:'Cormorant Garamond',Georgia,serif;font-size:36px!important;font-weight:600!important;line-height:1.1!important;color:#8c6b2e!important;letter-spacing:.4px}
+#rec2487446153 [data-elem-id="1772804808869"] .tn-atom::after{content:'';display:block;width:48px;height:1px;margin:7px auto 0;background:#bfa36b}
+#rec2487446153 [data-elem-id="1772813480591000001"]{top:169px!important;left:50%!important;width:min(308px,calc(100vw - 40px))!important;transform:translateX(-50%)}
+#rec2487446153 [data-elem-id="1772813480591000001"] .tn-atom{font-size:14px!important;line-height:1.35!important;color:#8d7b68!important}
+@media(max-width:479px){#rec2487446153 [data-elem-id="1772804808869"] .tn-atom{font-size:32px!important}}
