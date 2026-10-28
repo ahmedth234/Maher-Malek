@@ -75,3 +75,6 @@
 
 /* Text boxes keep their allotted space when Android enlarges system text. */
 .reference-sections [data-elem-type="text"] .tn-atom{display:block;height:auto!important;min-height:0}
+
+/* Solid gold remains visible in Android WebViews that fail to paint clipped gradients. */
+.model-number{color:#b48c3d!important;-webkit-text-fill-color:#b48c3d!important;background:none!important;animation:none!important}
