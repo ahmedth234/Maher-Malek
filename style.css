@@ -63,3 +63,8 @@ html,body{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 .external-browser-tip{position:fixed;bottom:calc(12px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:14px;max-width:calc(100vw - 24px);padding:10px 12px 10px 17px;border:1px solid #bda875;background:#fcf8eff5;box-shadow:0 3px 18px #514b3c26;border-radius:5px;font:500 13px/1.4 Montserrat,sans-serif;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 .external-browser-tip a{white-space:nowrap;color:#715b2d;text-decoration:none}
 .external-browser-tip button{border:0;background:none;color:#715b2d;font:20px/1 sans-serif;padding:3px 5px}
+
+/* Music control matching the reference invitation. */
+.music-toggle{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));right:20px;width:60px;height:60px;padding:0;border:0;border-radius:50%;background:#5a0f1b;display:flex;justify-content:center;align-items:center;z-index:2147483647;cursor:pointer;box-shadow:0 4px 6px #0000001a;transition:opacity .3s ease-in-out}
+.music-toggle svg{width:30px;height:30px;fill:#fff}
+.music-toggle:focus-visible{outline:3px solid #b48c3d;outline-offset:4px}

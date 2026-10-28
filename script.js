@@ -14,6 +14,21 @@ const openBtn=document.getElementById('openInviteBtn');
 const openingVideo = document.getElementById('envelopeVideo');
 const gardenVideo = document.getElementById('gardenVideo');
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+const invitationMusic=document.getElementById('invitationMusic');
+const musicToggle=document.getElementById('musicToggle');
+function syncMusicButton(){
+ const playing=!invitationMusic.paused&&!invitationMusic.ended;
+ musicToggle.querySelector('.music-pause').hidden=!playing;
+ musicToggle.querySelector('.music-play').hidden=playing;
+ musicToggle.setAttribute('aria-label',playing?'Mettre la musique en pause':'Écouter la musique');
+ musicToggle.setAttribute('aria-pressed',String(playing));
+}
+function playMusic(){
+ invitationMusic.play().catch(syncMusicButton);
+}
+['play','pause','ended','error'].forEach(event=>invitationMusic.addEventListener(event,syncMusicButton));
+musicToggle.addEventListener('click',()=>{if(invitationMusic.paused)playMusic();else invitationMusic.pause();});
+
 // Les initiales sont intégrées aux images de la vidéo. Aucun calque ne suit le sceau.
 let openingTimer;
 let envelopeExitAnimation;
@@ -23,6 +38,8 @@ const envelopeInterior = new Image();
 envelopeInterior.src = 'assets/animation/envelope-open-interior.jpg';
 let openingStarted = false;
 function showEnvelope() {
+ invitationMusic.pause();
+ musicToggle.hidden=true;
  clearTimeout(openingTimer);
  clearTimeout(openingRevealTimer);
  openingStarted = false;
@@ -57,6 +74,8 @@ async function finishOpening() {
  function revealInvitation() {
   if (!cover.classList.contains('flap-opening')) return;
   document.body.classList.add('invitation-open');
+  musicToggle.hidden=false;
+  syncMusicButton();
   gardenVideo.currentTime = 0;
   if (!reducedMotion.matches) gardenVideo.play().catch(()=>{});
   cover.classList.add('flap-revealing');
@@ -117,6 +136,7 @@ async function finishOpening() {
 async function openEnvelope() {
  if(openingStarted) return;
  openingStarted = true;
+ playMusic();
  openBtn.disabled = true;
  if(reducedMotion.matches){finishOpening();return;}
  cover.classList.add('opening');
