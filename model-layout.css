@@ -43,3 +43,10 @@
 #rec2487446103 [data-elem-id="1782315340571000001"]{height:179px!important}
 #rec2487446103 [data-elem-id="1772803124037"]{height:245px!important}
 #rec2487446103 [data-elem-id="1772803062504"] .tn-atom,#rec2487446103 [data-elem-id="1772803288793000003"] .tn-atom,#rec2487446103 [data-elem-id="1782315588274000002"] .tn-atom,#rec2487446103 [data-elem-id="1778517684813000002"] .tn-atom{font-size:26px!important;white-space:nowrap}
+/* Chaque horaire et son intitulé partagent le même axe vertical. */
+#rec2487446103 [data-elem-id="1772803062504"],#rec2487446103 [data-elem-id="1763405268776"]{top:139px!important}
+#rec2487446103 [data-elem-id="1772803288793000003"],#rec2487446103 [data-elem-id="1772803288793000002"]{top:221px!important}
+#rec2487446103 [data-elem-id="1782315588274000002"],#rec2487446103 [data-elem-id="1782315605037000003"]{top:298px!important}
+#rec2487446103 [data-elem-id="1778517684813000002"],#rec2487446103 [data-elem-id="1778517684813000001"]{top:377px!important}
+#rec2487446103 [data-elem-type="text"]:not([data-elem-id="1763405219328"]){display:flex!important;align-items:center;height:52px!important}
+#rec2487446103 [data-elem-type="text"]:not([data-elem-id="1763405219328"]) .tn-atom{display:block;height:auto!important;line-height:1.2!important}
