@@ -15,12 +15,15 @@ const gardenVideo = document.getElementById('gardenVideo');
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 // Les initiales sont intégrées aux images de la vidéo. Aucun calque ne suit le sceau.
 let openingTimer;
+let envelopeExitAnimation;
+const envelopeStage = document.querySelector('.envelope-stage');
 let openingStarted = false;
 function showEnvelope() {
  clearTimeout(openingTimer);
  openingStarted = false;
  cover.hidden = false;
- cover.classList.remove('opening','fading');
+ envelopeExitAnimation?.cancel();
+ cover.classList.remove('opening','fading','departing');
  document.body.classList.add('locked');
  document.body.classList.remove('invitation-open');
  invitation.inert = true;
@@ -33,21 +36,31 @@ function showEnvelope() {
  cover.focus({preventScroll:true});
 }
 function finishOpening() {
- if (cover.hidden || cover.classList.contains('fading')) return;
+ if (cover.hidden || cover.classList.contains('departing')) return;
  clearTimeout(openingTimer);
- cover.classList.add('fading');
+ cover.classList.add('departing');
  document.body.classList.add('invitation-open');
  gardenVideo.currentTime = 0;
  if (!reducedMotion.matches) gardenVideo.play().catch(()=>{});
- setTimeout(()=>{
+ function completeOpening() {
+  if (!cover.classList.contains('departing')) return;
   cover.hidden = true;
   openingVideo.pause();
-   document.body.classList.remove('locked');
+  document.body.classList.remove('locked');
   invitation.inert = false;
   const heading = document.querySelector('h1');
   heading.tabIndex = -1;
   heading.focus({preventScroll:true});
- },reducedMotion.matches?0:1400);
+ }
+ if (reducedMotion.matches) { completeOpening(); return; }
+ // Wait until the entire envelope has crossed the viewport's top edge.
+ const bounds = envelopeStage.getBoundingClientRect();
+ const distance = -(bounds.bottom + 24);
+ envelopeExitAnimation = envelopeStage.animate([
+  { transform: 'translateY(0)' },
+  { transform: `translateY(${distance}px)` }
+ ], { duration: 800, easing: 'cubic-bezier(.45,0,.2,1)', fill: 'forwards' });
+ envelopeExitAnimation.finished.then(completeOpening,()=>{});
 }
 async function openEnvelope() {
  if(openingStarted) return;
@@ -56,7 +69,7 @@ async function openEnvelope() {
  if(reducedMotion.matches){finishOpening();return;}
  cover.classList.add('opening');
  openingVideo.currentTime = 0;
- openingVideo.playbackRate = 1.2;
+ openingVideo.playbackRate = 1.5;
  try { await openingVideo.play(); }
  catch { finishOpening(); }
  openingTimer = setTimeout(finishOpening,20000);
