@@ -18,8 +18,8 @@ const invitationMusic=document.getElementById('invitationMusic');
 const musicToggle=document.getElementById('musicToggle');
 function syncMusicButton(){
  const playing=!invitationMusic.paused&&!invitationMusic.ended;
- musicToggle.querySelector('.music-pause').hidden=!playing;
- musicToggle.querySelector('.music-play').hidden=playing;
+ musicToggle.querySelector('.music-pause').toggleAttribute('hidden',!playing);
+ musicToggle.querySelector('.music-play').toggleAttribute('hidden',playing);
  musicToggle.setAttribute('aria-label',playing?'Mettre la musique en pause':'Écouter la musique');
  musicToggle.setAttribute('aria-pressed',String(playing));
 }
