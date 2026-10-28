@@ -54,8 +54,8 @@
    const width=cell.getBoundingClientRect().width;
    fit(atom,width<=innerWidth?width:innerWidth-36,height,[atom]);
   });
-  document.querySelectorAll('.model-number,.model-label').forEach(atom=>{
-   fit(atom,Math.max(36,atom.parentElement.getBoundingClientRect().width-4),atom.classList.contains('model-number')?56:26,[atom]);
+  document.querySelectorAll('.model-label').forEach(atom=>{
+   fit(atom,Math.max(36,atom.parentElement.getBoundingClientRect().width-4),26,[atom]);
   });
  }
  function schedule(){if(!scheduled){scheduled=true;requestAnimationFrame(fitHero);}}

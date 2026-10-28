@@ -78,3 +78,10 @@
 
 /* Solid gold remains visible in Android WebViews that fail to paint clipped gradients. */
 .model-number{color:#b48c3d!important;-webkit-text-fill-color:#b48c3d!important;background:none!important;animation:none!important}
+
+/* SVG digits avoid Android text zoom and fixed-line-height fitting entirely. */
+.reference-sections .model-countdown{width:min(335px,calc(100vw - 32px));margin:80px auto 0;gap:0}
+.model-countdown .model-time{flex:1 1 0;min-width:0;width:0}
+.model-countdown .model-number{width:100%;height:auto;aspect-ratio:82/62;overflow:visible;line-height:normal}
+.model-countdown .model-separator{flex:0 0 10px;font-size:30px;line-height:1;margin-top:-27px}
+.model-countdown .model-label{font-size:14px;white-space:nowrap}

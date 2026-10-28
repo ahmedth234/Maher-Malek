@@ -4,6 +4,7 @@ function updateCountdown(){
  const remaining=Math.max(0,weddingDate-Date.now());
  const values=[Math.floor(remaining/86400000),Math.floor(remaining/3600000)%24,Math.floor(remaining/60000)%60,Math.floor(remaining/1000)%60];
  ['days','hours','minutes','seconds'].forEach((id,i)=>document.getElementById(id).textContent=String(values[i]).padStart(2,'0'));
+ document.querySelector('.model-countdown').setAttribute('aria-label',`${values[0]} jours, ${values[1]} heures, ${values[2]} minutes et ${values[3]} secondes avant le mariage`);
  document.getElementById('countdownMessage').hidden=remaining>0;
 }
 updateCountdown();setInterval(updateCountdown,1000);
