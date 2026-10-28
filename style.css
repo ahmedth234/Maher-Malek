@@ -38,3 +38,10 @@ body{background:#f9f0e0}main{max-width:744px;background:#f9f0e0;box-shadow:none}
 .envelope-upper-flap{z-index:3;will-change:transform}
 .flap-opening .envelope-video,.flap-opening .envelope-still{visibility:hidden}
 .invitation-cover.flap-revealing{opacity:0;transition:opacity .6s ease;pointer-events:none}
+
+/* Prénoms plus discrets, initiales majuscules lisibles et repères remontés. */
+.hero h1{top:33%;font-size:clamp(52px,17vw,80px);line-height:1.05}
+.hero h1 .name-initial{display:inline;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:500;font-size:.95em;line-height:1}
+.hero h1 small{height:40px;margin:2px 0}
+.hero .scroll-cue{top:63.5%;margin-top:0;text-shadow:0 1px 8px #fff8e5}
+.hero .date-top,.hero .date-top strong{font-weight:700}
