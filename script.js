@@ -56,7 +56,7 @@ async function openEnvelope() {
  if(reducedMotion.matches){finishOpening();return;}
  cover.classList.add('opening');
  openingVideo.currentTime = 0;
- openingVideo.playbackRate = 1;
+ openingVideo.playbackRate = 1.2;
  try { await openingVideo.play(); }
  catch { finishOpening(); }
  openingTimer = setTimeout(finishOpening,20000);
