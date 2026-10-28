@@ -12,7 +12,6 @@ const invitation=document.getElementById('invitation');
 const openBtn=document.getElementById('openInviteBtn');
 const openingVideo = document.getElementById('envelopeVideo');
 const gardenVideo = document.getElementById('gardenVideo');
-const skipOpening = document.getElementById('skipOpening');
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 // Les initiales sont intégrées aux images de la vidéo. Aucun calque ne suit le sceau.
 let openingTimer;
@@ -26,7 +25,6 @@ function showEnvelope() {
  document.body.classList.remove('invitation-open');
  invitation.inert = true;
  openBtn.disabled = false;
- skipOpening.hidden = true;
  openingVideo.pause();
  openingVideo.currentTime = 0;
  gardenVideo.pause();
@@ -57,16 +55,14 @@ async function openEnvelope() {
  openBtn.disabled = true;
  if(reducedMotion.matches){finishOpening();return;}
  cover.classList.add('opening');
- skipOpening.hidden = false;
  openingVideo.currentTime = 0;
- openingVideo.playbackRate = 0.8;
+ openingVideo.playbackRate = 1;
  try { await openingVideo.play(); }
  catch { finishOpening(); }
  openingTimer = setTimeout(finishOpening,20000);
 }
 openingVideo.addEventListener('ended',finishOpening);
 openingVideo.addEventListener('error',()=>{if(openingStarted)finishOpening();});
-skipOpening.addEventListener('click',finishOpening);
 openBtn.addEventListener('click',openEnvelope);
 document.getElementById('replayInvite').addEventListener('click',showEnvelope);
 // Petales en couches indépendantes : chute et dérive, avec retours décalés.
