@@ -110,3 +110,26 @@
 #rec2487446103 [data-elem-id="1778517684813000001"] .tn-atom{font-size:18px!important;text-align:left;white-space:normal;line-height:1.25!important}
 
 #rec2487446103 .programme-arabic{font-size:.85em;font-weight:700;font-family:Arial,Tahoma,sans-serif}
+
+/* Mirrored programme columns, centred vertically on each diamond. */
+#rec2487446103 [data-elem-id="1772803062504"]{left:auto!important;right:calc(50% + 24px)!important;width:min(185px,calc(50vw - 36px))!important}
+#rec2487446103 [data-elem-id="1772803062504"] .tn-atom{text-align:right!important}
+#rec2487446103 [data-elem-id="1763405268776"]{left:calc(50% + 24px)!important;width:min(185px,calc(50vw - 36px))!important}
+#rec2487446103 [data-elem-id="1772803196067"]{top:161px!important;left:calc(50% - 4px)!important;width:8px!important;height:8px!important}
+#rec2487446103 [data-elem-id="1772803062504"],#rec2487446103 [data-elem-id="1763405268776"]{top:130px!important;display:flex!important;align-items:center!important;height:70px!important;padding:0!important}
+#rec2487446103 [data-elem-id="1772803288793000003"]{left:auto!important;right:calc(50% + 24px)!important;width:min(185px,calc(50vw - 36px))!important}
+#rec2487446103 [data-elem-id="1772803288793000003"] .tn-atom{text-align:right!important}
+#rec2487446103 [data-elem-id="1772803288793000002"]{left:calc(50% + 24px)!important;width:min(185px,calc(50vw - 36px))!important}
+#rec2487446103 [data-elem-id="1772803288793000004"]{top:243px!important;left:calc(50% - 4px)!important;width:8px!important;height:8px!important}
+#rec2487446103 [data-elem-id="1772803288793000003"],#rec2487446103 [data-elem-id="1772803288793000002"]{top:212px!important;display:flex!important;align-items:center!important;height:70px!important;padding:0!important}
+#rec2487446103 [data-elem-id="1782315588274000002"]{left:auto!important;right:calc(50% + 24px)!important;width:min(185px,calc(50vw - 36px))!important}
+#rec2487446103 [data-elem-id="1782315588274000002"] .tn-atom{text-align:right!important}
+#rec2487446103 [data-elem-id="1782315605037000003"]{left:calc(50% + 24px)!important;width:min(185px,calc(50vw - 36px))!important}
+#rec2487446103 [data-elem-id="1772803465944000007"]{top:320px!important;left:calc(50% - 4px)!important;width:8px!important;height:8px!important}
+#rec2487446103 [data-elem-id="1782315588274000002"],#rec2487446103 [data-elem-id="1782315605037000003"]{top:289px!important;display:flex!important;align-items:center!important;height:70px!important;padding:0!important}
+#rec2487446103 [data-elem-id="1778517684813000002"]{left:auto!important;right:calc(50% + 24px)!important;width:min(185px,calc(50vw - 36px))!important}
+#rec2487446103 [data-elem-id="1778517684813000002"] .tn-atom{text-align:right!important}
+#rec2487446103 [data-elem-id="1778517684813000001"]{left:calc(50% + 24px)!important;width:min(185px,calc(50vw - 36px))!important}
+#rec2487446103 [data-elem-id="1778517704423000003"]{top:399px!important;left:calc(50% - 4px)!important;width:8px!important;height:8px!important}
+#rec2487446103 [data-elem-id="1778517684813000002"],#rec2487446103 [data-elem-id="1778517684813000001"]{top:368px!important;display:flex!important;align-items:center!important;height:70px!important;padding:0!important}
+#rec2487446103 [data-elem-type="text"]:not([data-elem-id="1763405219328"]){height:70px!important}
