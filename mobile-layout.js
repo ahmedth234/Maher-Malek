@@ -50,7 +50,7 @@
    const record=cell.closest('[id^="rec"]');
    if(!atom||!record)return;
    let height=slots[record.id]?.[cell.dataset.elemId]||parseFloat(cell.dataset.fieldHeightValue)||64;
-   if(record.id==='rec2487446103'&&cell.dataset.elemId!=='1763405219328')height=52;
+   if(record.id==='rec2487446103'&&cell.dataset.elemId!=='1763405219328')height=70;
    const width=cell.getBoundingClientRect().width;
    fit(atom,width<=innerWidth?width:innerWidth-36,height,[atom]);
   });

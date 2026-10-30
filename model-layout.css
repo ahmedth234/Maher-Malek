@@ -94,3 +94,17 @@
 
 /* Personal couple photograph in the existing closing frame. */
 #rec2487446253 [data-elem-id="1772823499423"] img{width:100%;height:675px;object-fit:cover;object-position:center}
+
+/* Programme updated with full event names and space for three mobile lines. */
+#rec2487446103 [data-elem-id="1763405268776"],#rec2487446103 [data-elem-id="1772803062504"]{top:130px!important;height:70px!important}
+#rec2487446103 [data-elem-id="1763405268776"]{left:calc(50% + 22px)!important;width:min(185px,calc(50vw - 30px))!important}
+#rec2487446103 [data-elem-id="1763405268776"] .tn-atom{font-size:18px!important;text-align:left;white-space:normal;line-height:1.25!important}
+#rec2487446103 [data-elem-id="1772803288793000002"],#rec2487446103 [data-elem-id="1772803288793000003"]{top:212px!important;height:70px!important}
+#rec2487446103 [data-elem-id="1772803288793000002"]{left:calc(50% + 22px)!important;width:min(185px,calc(50vw - 30px))!important}
+#rec2487446103 [data-elem-id="1772803288793000002"] .tn-atom{font-size:18px!important;text-align:left;white-space:normal;line-height:1.25!important}
+#rec2487446103 [data-elem-id="1782315605037000003"],#rec2487446103 [data-elem-id="1782315588274000002"]{top:289px!important;height:70px!important}
+#rec2487446103 [data-elem-id="1782315605037000003"]{left:calc(50% + 22px)!important;width:min(185px,calc(50vw - 30px))!important}
+#rec2487446103 [data-elem-id="1782315605037000003"] .tn-atom{font-size:18px!important;text-align:left;white-space:normal;line-height:1.25!important}
+#rec2487446103 [data-elem-id="1778517684813000001"],#rec2487446103 [data-elem-id="1778517684813000002"]{top:368px!important;height:70px!important}
+#rec2487446103 [data-elem-id="1778517684813000001"]{left:calc(50% + 22px)!important;width:min(185px,calc(50vw - 30px))!important}
+#rec2487446103 [data-elem-id="1778517684813000001"] .tn-atom{font-size:18px!important;text-align:left;white-space:normal;line-height:1.25!important}
