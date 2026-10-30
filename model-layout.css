@@ -85,3 +85,9 @@
 .model-countdown .model-number{width:100%;height:auto;aspect-ratio:82/62;overflow:visible;line-height:normal}
 .model-countdown .model-separator{flex:0 0 10px;font-size:30px;line-height:1;margin-top:-27px}
 .model-countdown .model-label{font-size:14px;white-space:nowrap}
+
+/* Actual Maison Berrich photograph, kept whole beneath the address. */
+#rec2487446153 .t396__artboard,#rec2487446153 .t396__carrier,#rec2487446153 .t396__filter{height:500px!important}
+#rec2487446153 [data-elem-id="1782312310182000001"]{top:225px!important;left:50%!important;width:min(380px,calc(100vw - 24px))!important;height:auto!important;transform:translateX(-50%)}
+#rec2487446153 [data-elem-id="1782312310182000001"] .tn-atom{display:block;height:auto!important}
+#rec2487446153 [data-elem-id="1782312310182000001"] img{width:100%;height:auto;object-fit:contain}
