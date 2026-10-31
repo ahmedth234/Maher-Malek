@@ -113,3 +113,10 @@
 
 /* Keep original horizontal spacing and centre each row on its timeline point. */
 #rec2487446103 [data-elem-type="text"]:not([data-elem-id="1763405219328"]){height:70px!important}
+
+/* One flowing gift composition; image can be replaced at the same asset path. */
+.reference-sections .gift-section{display:flex;flex-direction:column;align-items:center;gap:22px;padding:58px 20px 54px;background:#f9f0e0 url('assets/model/decor-25.png') center/100% 100% no-repeat;text-align:center}
+.gift-section h2{margin:0;max-width:100%;font:300 clamp(34px,8.5vw,41px)/1.4 'NewFonts',serif;color:#b48c3d}
+.gift-section p{margin:0;max-width:100%;font:100 clamp(18px,4.8vw,21px)/1.5 'NewFonts',serif;color:#725f4d}
+.gift-section .gift-photo{width:min(335px,100%);margin:4px 0 0}
+.gift-section .gift-photo img{display:block;width:100%;height:auto;border-radius:10px}
