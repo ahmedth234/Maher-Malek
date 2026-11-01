@@ -138,7 +138,7 @@
 .gift-section .guestbook-message p{font-size:18px;line-height:1.65;color:#725f4d}
 
 /* Anchor the animated rose to the bottom-left of the entire gift section. */
-#rec2487446183 [data-elem-id="1780167004386000002"]{top:auto!important;bottom:0!important;left:max(8px,calc(50% - 450px))!important;width:clamp(160px,40vw,251px)!important;height:auto!important}
+#rec2487446183 [data-elem-id="1780167004386000002"]{top:auto!important;bottom:-8px!important;left:13%!important;width:clamp(115px,24vw,170px)!important;height:auto!important}
 
 /* Reserve a floral footer so the rose remains fully visible, clear of the copy. */
-.reference-sections .gift-section{padding-bottom:195px}
+.reference-sections .gift-section{padding-bottom:48px}
