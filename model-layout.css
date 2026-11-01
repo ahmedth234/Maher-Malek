@@ -150,3 +150,9 @@
 /* Keep mobile copy inside the paper's actual inner edges, on one shared axis. */
 .gift-section>h2,.gift-section>p,.gift-section .guestbook-message{width:min(335px,72vw);max-width:100%;margin-left:auto;margin-right:auto;box-sizing:border-box;text-align:center;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 .gift-section .guestbook-message h3,.gift-section .guestbook-message p{width:100%;max-width:100%;overflow-wrap:break-word}
+
+/* Even line lengths for the voice guestbook paragraph. */
+.gift-section .guestbook-message p{text-align:justify;text-align-last:justify;text-wrap:balance;hyphens:none;overflow-wrap:normal;word-break:normal}
+
+.guestbook-message .guestbook-line{display:block;text-align:justify;text-align-last:justify;white-space:nowrap}
+@media(max-width:359px){.gift-section p{font-size:16px}}
