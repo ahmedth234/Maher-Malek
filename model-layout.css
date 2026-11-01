@@ -114,45 +114,19 @@
 /* Keep original horizontal spacing and centre each row on its timeline point. */
 #rec2487446103 [data-elem-type="text"]:not([data-elem-id="1763405219328"]){height:70px!important}
 
-/* One flowing gift composition; image can be replaced at the same asset path. */
-.reference-sections .gift-section{display:flex;flex-direction:column;align-items:center;gap:22px;padding:58px 20px 54px;background:#f9f0e0 url('assets/model/decor-25.png') center/100% 100% no-repeat;text-align:center}
-.gift-section h2{margin:0;max-width:100%;font:300 clamp(34px,8.5vw,41px)/1.4 'NewFonts',serif;color:#b48c3d}
-.gift-section p{margin:0;max-width:100%;font:100 clamp(18px,4.8vw,21px)/1.5 'NewFonts',serif;color:#725f4d}
-.gift-section .gift-photo{width:min(335px,100%);margin:4px 0 0}
-.gift-section .gift-photo img{display:block;width:100%;height:auto;border-radius:10px}
-
-/* Smaller cutout and the original gently swaying corner flowers. */
-.gift-section .gift-photo{width:min(285px,100%);position:relative;z-index:2}
-.gift-section .gift-photo img{border-radius:0}
-.gift-section h2,.gift-section p{position:relative;z-index:2}
-
-/* Restore the original flower elements, responsive geometry and animation frames. */
-.gift-section .gift-flower-layer{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:clip}
-#rec2487446183 .gift-flower-layer .t396,#rec2487446183 .gift-flower-layer .t396__artboard{height:100%!important;width:100%}
-#rec2487446183 .gift-flower-layer .t396__artboard{background:transparent!important}
-
-/* Voice guestbook message beneath the telephone. */
-.gift-section .guestbook-message{position:relative;z-index:2;width:min(335px,100%);margin:5px 0 0;padding-top:21px}
+/* Reference paper framing: the 744px artwork fills narrow screens by cropping its outer margins. */
+.reference-sections .gift-section{display:flex;flex-direction:column;align-items:center;gap:22px;padding:58px 20px 48px;background:#f9f0e0 url('assets/model/decor-25.png') center/max(744px,100%) 100% no-repeat;text-align:center}
+.gift-section>h2,.gift-section>p,.gift-section .guestbook-message{width:min(335px,100%);max-width:100%;margin-left:auto;margin-right:auto;box-sizing:border-box;text-align:center;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.gift-section h2{margin-top:0;margin-bottom:0;font:300 clamp(34px,8.5vw,41px)/1.4 'NewFonts',serif;color:#b48c3d;position:relative;z-index:2}
+.gift-section p{margin-top:0;margin-bottom:0;font:100 clamp(18px,4.8vw,21px)/1.5 'NewFonts',serif;color:#725f4d;position:relative;z-index:2}
+.gift-section .guestbook-message{position:relative;z-index:2;margin-top:0;padding-top:21px}
 .gift-section .guestbook-message::before{content:'';position:absolute;top:0;left:50%;width:46px;height:1px;transform:translateX(-50%);background:#b48c3d80}
 .gift-section .guestbook-message h3{margin:0 0 16px;font:300 clamp(34px,8.5vw,41px)/1.4 'NewFonts',serif;color:#b48c3d}
-
-
-/* Anchor the animated rose to the bottom-left of the entire gift section. */
-#rec2487446183 [data-elem-id="1780167004386000002"]{top:auto!important;bottom:-14px!important;left:calc(13% - 30px)!important;width:251px!important;height:auto!important}
-
-/* Reserve a floral footer so the rose remains fully visible, clear of the copy. */
-.reference-sections .gift-section{padding-bottom:48px}
-
-/* Guestbook copy precedes the telephone so corner flowers frame the image. */
-.gift-section .guestbook-message{margin-top:0}
-.gift-section .gift-photo{margin-top:8px}
-
-/* Keep mobile copy inside the paper's actual inner edges, on one shared axis. */
-.gift-section>h2,.gift-section>p,.gift-section .guestbook-message{width:min(335px,72vw);max-width:100%;margin-left:auto;margin-right:auto;box-sizing:border-box;text-align:center;-webkit-text-size-adjust:100%;text-size-adjust:100%}
-.gift-section .guestbook-message h3,.gift-section .guestbook-message p{width:100%;max-width:100%;overflow-wrap:break-word}
-
-/* Even line lengths for the voice guestbook paragraph. */
-.gift-section .guestbook-message p{text-align:justify;text-align-last:justify;text-wrap:balance;hyphens:none;overflow-wrap:normal;word-break:normal}
-
+.gift-section .guestbook-message p{width:100%;max-width:100%;hyphens:none;word-break:normal}
 .guestbook-message .guestbook-line{display:block;text-align:justify;text-align-last:justify;white-space:nowrap}
-@media(max-width:359px){.gift-section p{font-size:16px}}
+.gift-section .gift-photo{width:min(285px,100%);margin:8px 0 0;position:relative;z-index:2}
+.gift-section .gift-photo img{display:block;width:100%;height:auto}
+.gift-section .gift-flower-layer{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:clip}
+#rec2487446183 .gift-flower-layer .t396,#rec2487446183 .gift-flower-layer .t396__artboard{height:100%!important;width:100%;background:transparent!important}
+#rec2487446183 [data-elem-id="1780167004386000002"]{top:auto!important;bottom:-14px!important;left:calc(50% - 450px)!important;width:251px!important;height:auto!important}
+@media(max-width:479px){#rec2487446183 [data-elem-id="1780167004386000002"]{left:-24px!important}}
