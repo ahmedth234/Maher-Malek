@@ -130,3 +130,6 @@
 #rec2487446183 .gift-flower-layer .t396,#rec2487446183 .gift-flower-layer .t396__artboard{height:100%!important;width:100%;background:transparent!important}
 #rec2487446183 [data-elem-id="1780167004386000002"]{top:auto!important;bottom:-14px!important;left:calc(50% - 450px)!important;width:251px!important;height:auto!important}
 @media(max-width:479px){#rec2487446183 [data-elem-id="1780167004386000002"]{left:-24px!important}}
+
+/* Desktop only: follow the paper edge rather than a fixed 450px offset. */
+@media(min-width:480px){#rec2487446183 [data-elem-id="1780167004386000002"]{left:calc(50% - max(275px,37%) - 24px)!important}}
