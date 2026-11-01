@@ -123,7 +123,7 @@
 .gift-section .guestbook-message::before{content:'';position:absolute;top:0;left:50%;width:46px;height:1px;transform:translateX(-50%);background:#b48c3d80}
 .gift-section .guestbook-message h3{margin:0 0 16px;font:300 clamp(34px,8.5vw,41px)/1.4 'NewFonts',serif;color:#b48c3d}
 .gift-section .guestbook-message p{width:100%;max-width:100%;hyphens:none;word-break:normal}
-.guestbook-message .guestbook-line{display:block;text-align:justify;text-align-last:justify;white-space:nowrap}
+.guestbook-message .guestbook-line{display:block;text-align:center;text-align-last:auto;white-space:normal;word-spacing:normal;letter-spacing:normal}
 .gift-section .gift-photo{width:min(285px,100%);margin:8px 0 0;position:relative;z-index:2}
 .gift-section .gift-photo img{display:block;width:100%;height:auto}
 .gift-section .gift-flower-layer{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:clip}
