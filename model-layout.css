@@ -146,3 +146,7 @@
 /* Guestbook copy precedes the telephone so corner flowers frame the image. */
 .gift-section .guestbook-message{margin-top:0}
 .gift-section .gift-photo{margin-top:8px}
+
+/* Keep mobile copy inside the paper's actual inner edges, on one shared axis. */
+.gift-section>h2,.gift-section>p,.gift-section .guestbook-message{width:min(335px,72vw);max-width:100%;margin-left:auto;margin-right:auto;box-sizing:border-box;text-align:center;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.gift-section .guestbook-message h3,.gift-section .guestbook-message p{width:100%;max-width:100%;overflow-wrap:break-word}
