@@ -142,3 +142,7 @@
 
 /* Reserve a floral footer so the rose remains fully visible, clear of the copy. */
 .reference-sections .gift-section{padding-bottom:48px}
+
+/* Guestbook copy precedes the telephone so corner flowers frame the image. */
+.gift-section .guestbook-message{margin-top:0}
+.gift-section .gift-photo{margin-top:8px}
