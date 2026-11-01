@@ -125,7 +125,8 @@
 .gift-section .gift-photo{width:min(285px,100%);position:relative;z-index:2}
 .gift-section .gift-photo img{border-radius:0}
 .gift-section h2,.gift-section p{position:relative;z-index:2}
-.gift-section .gift-corner{position:absolute;pointer-events:none;z-index:1;transform-origin:center}
-.gift-section .gift-corner img{display:block;width:100%;height:auto}
-.gift-section .gift-corner-right{width:130px;top:8px;right:max(-8px,calc(50% - 250px))}
-.gift-section .gift-corner-left{width:140px;bottom:8px;left:max(-10px,calc(50% - 250px))}
+
+/* Restore the original flower elements, responsive geometry and animation frames. */
+.gift-section .gift-flower-layer{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:clip}
+#rec2487446183 .gift-flower-layer .t396,#rec2487446183 .gift-flower-layer .t396__artboard{height:100%!important;width:100%}
+#rec2487446183 .gift-flower-layer .t396__artboard{background:transparent!important}
