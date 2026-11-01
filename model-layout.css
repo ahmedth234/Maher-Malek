@@ -136,3 +136,6 @@
 .gift-section .guestbook-message::before{content:'';position:absolute;top:0;left:50%;width:46px;height:1px;transform:translateX(-50%);background:#b48c3d80}
 .gift-section .guestbook-message h3{margin:0 0 16px;font:300 clamp(29px,7vw,33px)/1.3 'NewFonts',serif;color:#b48c3d}
 .gift-section .guestbook-message p{font-size:18px;line-height:1.65;color:#725f4d}
+
+/* Anchor the animated rose to the bottom-left of the entire gift section. */
+#rec2487446183 [data-elem-id="1780167004386000002"]{top:auto!important;bottom:0!important;left:max(-80px,calc(50% - 450px))!important}
