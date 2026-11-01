@@ -120,3 +120,12 @@
 .gift-section p{margin:0;max-width:100%;font:100 clamp(18px,4.8vw,21px)/1.5 'NewFonts',serif;color:#725f4d}
 .gift-section .gift-photo{width:min(335px,100%);margin:4px 0 0}
 .gift-section .gift-photo img{display:block;width:100%;height:auto;border-radius:10px}
+
+/* Smaller cutout and the original gently swaying corner flowers. */
+.gift-section .gift-photo{width:min(285px,100%);position:relative;z-index:2}
+.gift-section .gift-photo img{border-radius:0}
+.gift-section h2,.gift-section p{position:relative;z-index:2}
+.gift-section .gift-corner{position:absolute;pointer-events:none;z-index:1;transform-origin:center}
+.gift-section .gift-corner img{display:block;width:100%;height:auto}
+.gift-section .gift-corner-right{width:130px;top:8px;right:max(-8px,calc(50% - 250px))}
+.gift-section .gift-corner-left{width:140px;bottom:8px;left:max(-10px,calc(50% - 250px))}
