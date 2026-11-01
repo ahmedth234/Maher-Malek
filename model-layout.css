@@ -130,3 +130,9 @@
 .gift-section .gift-flower-layer{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:clip}
 #rec2487446183 .gift-flower-layer .t396,#rec2487446183 .gift-flower-layer .t396__artboard{height:100%!important;width:100%}
 #rec2487446183 .gift-flower-layer .t396__artboard{background:transparent!important}
+
+/* Voice guestbook message beneath the telephone. */
+.gift-section .guestbook-message{position:relative;z-index:2;width:min(335px,100%);margin:5px 0 0;padding-top:21px}
+.gift-section .guestbook-message::before{content:'';position:absolute;top:0;left:50%;width:46px;height:1px;transform:translateX(-50%);background:#b48c3d80}
+.gift-section .guestbook-message h3{margin:0 0 16px;font:300 clamp(29px,7vw,33px)/1.3 'NewFonts',serif;color:#b48c3d}
+.gift-section .guestbook-message p{font-size:18px;line-height:1.65;color:#725f4d}
